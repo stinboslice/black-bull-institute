@@ -62,7 +62,10 @@ const personalityKeys = [
   "paperHands",
   "exitLiquidity",
   "whaleWatcher",
-  "narrativeChaser"
+  "narrativeChaser",
+  "sniper",
+  "bundler",
+  "dipCollector"
 ];
 
 /*
@@ -187,7 +190,7 @@ const personalities = {
     accent: "#66d9ff"
   },
 
-  narrativeChaser: {
+    narrativeChaser: {
     title: "Narrative Chaser",
     icon: "✦",
     severity: "VISIONARY",
@@ -206,6 +209,69 @@ const personalities = {
     shareLine:
       "The Black Bull Institute diagnosed me as a Narrative Chaser.",
     accent: "#d27cff"
+  },
+
+  sniper: {
+    title: "The Sniper",
+    icon: "⌖",
+    severity: "OVER-CALIBRATED",
+    artwork: "assets/result-sniper.png",
+    bodyClass: "result-sniper",
+    summary:
+      "You can identify the perfect entry with extraordinary precision, usually several minutes after it has already happened.",
+    habitat:
+      "A five-second chart covered in lines nobody else is qualified to interpret.",
+    ability:
+      "Waiting patiently for confirmation of something that is already obvious.",
+    weakness:
+      "Pressing the button before every possible variable has been reviewed.",
+    phrase:
+      "\"I will catch the next one.\"",
+    shareLine:
+      "The Black Bull Institute diagnosed me as The Sniper.",
+    accent: "#f4c84a"
+  },
+
+  bundler: {
+    title: "The Bundler",
+    icon: "▦",
+    severity: "COORDINATED",
+    artwork: "assets/result-bundler.png",
+    bodyClass: "result-bundler",
+    summary:
+      "You believe opportunities are best experienced together, preferably in one suspiciously organized package.",
+    habitat:
+      "Near several wallets that all discovered the same opportunity at exactly the same time.",
+    ability:
+      "Making coordinated behavior appear completely spontaneous.",
+    weakness:
+      "Public transaction history and anyone capable of following arrows.",
+    phrase:
+      "\"Completely organic.\"",
+    shareLine:
+      "The Black Bull Institute diagnosed me as The Bundler.",
+    accent: "#ff9e45"
+  },
+
+  dipCollector: {
+    title: "Dip Collector",
+    icon: "↓",
+    severity: "ACCUMULATING",
+    artwork: "assets/result-dip-collector.png",
+    bodyClass: "result-dip-collector",
+    summary:
+      "You interpret every decline as a limited-time discount, including declines that are clearly trying to communicate something.",
+    habitat:
+      "A burning marketplace with a shopping cart and no remaining cash.",
+    ability:
+      "Buying fear while everyone else is searching for the exit.",
+    weakness:
+      "Assuming every falling object must eventually bounce.",
+    phrase:
+      "\"Now it is cheap.\"",
+    shareLine:
+      "The Black Bull Institute diagnosed me as a Dip Collector.",
+    accent: "#55e68a"
   }
 };
 
@@ -953,6 +1019,219 @@ const questionBank = [
 ];
 
 /* =========================================================
+   EXPANDED RESULT SCORING
+========================================================= */
+
+/*
+  This applies targeted scoring adjustments without requiring
+  the original question objects to be rewritten individually.
+
+  Format:
+  "CATEGORY::ANSWER LABEL": { resultKey: points }
+*/
+
+const expandedScoreOverrides = {
+  /* THE SNIPER */
+
+  "DECISION PATTERN::I ask who made the button.": {
+    sniper: 3,
+    whaleWatcher: 1
+  },
+
+  "SOCIAL BEHAVIOR::Ask what happened first.": {
+    sniper: 3,
+    paperHands: 1
+  },
+
+  "OBJECT PREFERENCE::Flashlight": {
+    sniper: 3,
+    paperHands: 1
+  },
+
+  "TRUST EVALUATION::I need more information.": {
+    sniper: 3,
+    paperHands: 1
+  },
+
+  "DIRECTIONAL INSTINCT::Wait for someone else.": {
+    sniper: 2,
+    whaleWatcher: 1
+  },
+
+  "MOVIE LOGIC::Check the reviews.": {
+    sniper: 3,
+    whaleWatcher: 1
+  },
+
+  "PATIENCE MEASUREMENT::Check what other buyers are saying.": {
+    sniper: 3,
+    whaleWatcher: 1
+  },
+
+  "MAP READING::Wait for someone else to cross first.": {
+    sniper: 3,
+    whaleWatcher: 1
+  },
+
+  "DREAM ANALYSIS::Look up what the dream means.": {
+    sniper: 2,
+    narrativeChaser: 1
+  },
+
+  "SELF-ASSESSMENT::Careful.": {
+    sniper: 2,
+    paperHands: 1
+  },
+
+  /* THE BUNDLER */
+
+  "RISK RESPONSE::Ask what everyone else picked.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "SOCIAL BEHAVIOR::Run with them immediately.": {
+    bundler: 3,
+    topBlaster: 1
+  },
+
+  "FOOD SELECTION::Whatever the group packed": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "EMERGENCY RESPONSE::Wait to see what everyone else does.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "PHONE BEHAVIOR::Ask who has a charger.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "DOOR SELECTION::The door everyone is whispering about": {
+    bundler: 3,
+    narrativeChaser: 1
+  },
+
+  "GIFT RESPONSE::Search who else received one.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "NOISE INTERPRETATION::Ask the group chat.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "TIME PREFERENCE::Whenever everyone else is awake": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "SHOPPING INSTINCT::Join immediately.": {
+    bundler: 3,
+    topBlaster: 1
+  },
+
+  "MEMORY TEST::Until someone tells me they are valuable.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  "SELF-ASSESSMENT::Influenced.": {
+    bundler: 3,
+    whaleWatcher: 1
+  },
+
+  /* DIP COLLECTOR */
+
+  "RISK RESPONSE::Take the five dollars.": {
+    dipCollector: 2,
+    paperHands: 1
+  },
+
+  "FEAR ANALYSIS::Losing what I already have.": {
+    dipCollector: 2,
+    paperHands: 1
+  },
+
+  "MONEY RESPONSE::Save it.": {
+    dipCollector: 3,
+    paperHands: 1
+  },
+
+  "PERSONAL PHILOSOPHY::Better safe than sorry.": {
+    dipCollector: 2,
+    paperHands: 1
+  },
+
+  "EMERGENCY RESPONSE::Remain calm.": {
+    dipCollector: 2,
+    diamondHands: 1
+  },
+
+  "PHONE BEHAVIOR::Turn it off and save it.": {
+    dipCollector: 3,
+    paperHands: 1
+  },
+
+  "GIFT RESPONSE::Keep it unopened.": {
+    dipCollector: 2,
+    diamondHands: 1
+  },
+
+  "SHOPPING INSTINCT::Assume it is already too late.": {
+    dipCollector: 3,
+    exitLiquidity: 1
+  },
+
+  "LUCK RESPONSE::I should stop while ahead.": {
+    dipCollector: 2,
+    paperHands: 1
+  },
+
+  "MOVIE LOGIC::Believe them.": {
+    dipCollector: 2,
+    paperHands: 1
+  },
+
+  "PERSONAL BRANDING::The Sensible One": {
+    dipCollector: 3,
+    paperHands: 1
+  },
+
+  "SIGN INTERPRETATION::Coincidence.": {
+    dipCollector: 3,
+    paperHands: 1
+  },
+
+  "MAP READING::Find another route.": {
+    dipCollector: 3,
+    paperHands: 1
+  }
+};
+
+function applyExpandedScoreOverrides() {
+  questionBank.forEach((question) => {
+    question.answers.forEach((answer) => {
+      const overrideKey =
+        `${question.category}::${answer.label}`;
+
+      const replacementScore =
+        expandedScoreOverrides[overrideKey];
+
+      if (replacementScore) {
+        answer.score = { ...replacementScore };
+      }
+    });
+  });
+}
+
+applyExpandedScoreOverrides();
+
+/* =========================================================
    BULL COMMENTARY
 ========================================================= */
 
@@ -1614,7 +1893,7 @@ function initializeApp() {
     Missing images will not prevent the assessment from running.
   */
 
-  [
+    [
     "assets/trader-diagnosis-bg.png",
     "assets/black-bull.png",
     "assets/result-texture.png",
@@ -1623,7 +1902,10 @@ function initializeApp() {
     "assets/result-paper-hands.png",
     "assets/result-exit-liquidity.png",
     "assets/result-whale-watcher.png",
-    "assets/result-narrative-chaser.png"
+    "assets/result-narrative-chaser.png",
+    "assets/result-sniper.png",
+    "assets/result-bundler.png",
+    "assets/result-dip-collector.png"
   ].forEach((source) => {
     const image = new Image();
     image.src = source;
