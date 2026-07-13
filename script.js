@@ -220,7 +220,7 @@ const questionBank = [
     answers: [
       {
         label: "I press it immediately.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       },
       {
         label: "I ask who made the button.",
@@ -274,7 +274,7 @@ const questionBank = [
       },
       {
         label: "Take the envelope.",
-        score: { topBlaster: 3, narrativeChaser: 1 }
+        score: { exitLiquidity: 2, narrativeChaser: 1 }
       },
       {
         label: "Ask what everyone else picked.",
@@ -293,7 +293,7 @@ const questionBank = [
     answers: [
       {
         label: "Run with them immediately.",
-        score: { topBlaster: 3, whaleWatcher: 1 }
+        score: { topBlaster: 2, whaleWatcher: 1 }
       },
       {
         label: "Ask what happened first.",
@@ -343,7 +343,7 @@ const questionBank = [
     answers: [
       {
         label: "Missing out.",
-        score: { topBlaster: 3 }
+        score: { exitLiquidity: 3 }
       },
       {
         label: "Losing what I already have.",
@@ -405,7 +405,7 @@ const questionBank = [
       {
         label: "Throne I found online",
         emoji: "👑",
-        score: { narrativeChaser: 3, exitLiquidity: 1 }
+        score: { narrativeChaser: 2, exitLiquidity: 1 }
       }
     ]
   },
@@ -470,7 +470,7 @@ const questionBank = [
       },
       {
         label: "You only live once.",
-        score: { topBlaster: 3 }
+        score: { exitLiquidity: 3 }
       },
       {
         label: "Good things take time.",
@@ -546,10 +546,10 @@ const questionBank = [
       {
         label: "A mysterious mushroom",
         emoji: "🍄",
-        score: { narrativeChaser: 3, exitLiquidity: 1 }
+        score: { narrativeChaser: 3, exitLiquidity: 2 }
       },
       {
-        label: "Whatever the group packed",
+      label: "Whatever the group packed",
         emoji: "🎒",
         score: { whaleWatcher: 3 }
       }
@@ -589,7 +589,7 @@ const questionBank = [
       },
       {
         label: "Keep using it at full brightness.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { exitLiquidity: 2, topBlaster: 1 }
       },
       {
         label: "Ask who has a charger.",
@@ -683,7 +683,7 @@ const questionBank = [
       {
         label: "Noon",
         emoji: "☀️",
-        score: { paperHands: 3 }
+        score: { paperHands: 3, exitLiquidity: 1 }
       },
       {
         label: "Midnight",
@@ -704,7 +704,7 @@ const questionBank = [
     answers: [
       {
         label: "Join immediately.",
-        score: { whaleWatcher: 2, topBlaster: 2 }
+        score: { whaleWatcher: 2, topBlaster: 1 }
       },
       {
         label: "Ask what they are selling.",
@@ -754,7 +754,7 @@ const questionBank = [
       },
       {
         label: "I cannot lose.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       },
       {
         label: "I need to know who else is winning.",
@@ -823,7 +823,7 @@ const questionBank = [
       },
       {
         label: "Order another one.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       },
       {
         label: "Check what other buyers are saying.",
@@ -842,7 +842,7 @@ const questionBank = [
     answers: [
       {
         label: "The Early One",
-        score: { topBlaster: 3 }
+        score: { narrativeChaser: 3 }
       },
       {
         label: "The Patient One",
@@ -854,7 +854,7 @@ const questionBank = [
       },
       {
         label: "The Chosen One",
-        score: { narrativeChaser: 3, exitLiquidity: 1 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       }
     ]
   },
@@ -919,7 +919,7 @@ const questionBank = [
       },
       {
         label: "Look up what the dream means.",
-        score: { whaleWatcher: 2, narrativeChaser: 1 }
+        score: { whaleWatcher: 3, narrativeChaser: 1 }
       },
       {
         label: "Accept that destiny has spoken.",
