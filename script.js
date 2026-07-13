@@ -1742,8 +1742,10 @@ function buildShareText() {
     "",
     result.summary,
     "",
-    "Five questionable questions. One permanent diagnosis.",
-    "Take the Black Bull Institute assessment."
+    "Five questionable questions.",
+    "One permanent diagnosis.",
+    "",
+    "Find your trader personality at BullType."
   ].join("\n");
 }
 
@@ -1753,10 +1755,10 @@ async function shareResult() {
   }
 
   const shareData = {
-    title: "Black Bull Institute",
-    text: buildShareText(),
-    url: window.location.href
-  };
+  title: "BullType",
+  text: buildShareText(),
+  url: "https://bulltype.net/"
+};
 
   shareFeedback.textContent = "";
 
