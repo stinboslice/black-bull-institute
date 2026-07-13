@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <meta
+    name="description"
+    content="Five questionable questions. One permanent trader diagnosis."
+  >
+
+  <meta name="theme-color" content="#050505">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Black Bull Institute">
+  <meta
+    property="og:description"
+    content="A scientifically inaccurate assessment of your financial instincts."
+  >
+  <meta
+    property="og:image"
+    content="assets/social-preview.png"
+  >
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Black Bull Institute">
+  <meta
+    name="twitter:description"
+    content="Five questionable questions. One terminal diagnosis."
+  >
+  <meta
+    name="twitter:image"
+    content="assets/social-preview.png"
+  >
+
+  <title>Black Bull Institute</title>
+
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="site-background" aria-hidden="true"></div>
+  <div class="background-vignette" aria-hidden="true"></div>
+  <div class="background-noise" aria-hidden="true"></div>
+  <div class="scan-line" aria-hidden="true"></div>
+
+  <noscript>
+    <div class="noscript-message">
+      The Black Bull Institute requires JavaScript to evaluate your questionable instincts.
+    </div>
+  </noscript>
+
+  <header class="site-header">
+    <a
+      class="brand"
+      href="./"
+      aria-label="Black Bull Institute home"
+    >
+      <img
+  class="brand-icon"
+  src="assets/favicon.png"
+  alt=""
+  width="48"
+  height="48"
+>
+
+      <span class="brand-copy">
+        <span class="brand-name">BLACK BULL INSTITUTE</span>
+        <span class="brand-edition">DEPARTMENT OF BEHAVIORAL FINANCE</span>
+      </span>
+    </a>
+
+    <div class="header-status" aria-label="Assessment status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="headerStatus">ASSESSMENT READY</span>
+    </div>
+  </header>
+
+  <main id="app" class="app-shell">
+
+    <!-- LANDING SCREEN -->
+    <section
+      id="landingScreen"
+      class="screen screen-active landing-screen"
+      aria-labelledby="landingTitle"
+    >
+      <div class="landing-index">
+        <span>CASE INTAKE</span>
+        <span>DIVISION 001</span>
+      </div>
+
+      <div class="landing-content">
+        <p class="eyebrow">
+          DEPARTMENT OF BEHAVIORAL FINANCE
+        </p>
+
+        <h1 id="landingTitle" class="hero-title">
+          WHAT KIND OF
+          <span>TRADER ARE YOU?</span>
+        </h1>
+
+        <p class="hero-copy">
+          Five questionable questions.
+          One permanent diagnosis.
+          No financial knowledge required.
+        </p>
+
+        <div class="institute-notice">
+          <span class="notice-label">INSTITUTE NOTICE</span>
+
+          <p>
+            The Black Bull Institute has studied financial behavior for
+            centuries. Its findings have never been peer reviewed.
+          </p>
+        </div>
+
+        <div class="landing-actions">
+          <button
+            id="startButton"
+            class="primary-action"
+            type="button"
+          >
+            <span>BEGIN EVALUATION</span>
+            <span class="action-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <p class="assessment-note">
+            Estimated completion:
+            <strong>under 45 seconds</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="bull-introduction" aria-hidden="true">
+        <img
+          class="bull-image"
+          src="assets/black-bull.png"
+          alt=""
+        >
+
+        <div class="bull-caption">
+          <span>LEAD EXAMINER</span>
+          <strong>THE BLACK BULL</strong>
+        </div>
+
+        <p class="bull-quote">
+          “The assessment has already begun.”
+        </p>
+      </div>
+
+      <div class="landing-footer">
+        <p>
+          UNOFFICIAL COMMUNITY CULTURE EXPERIMENT
+        </p>
+
+        <p>
+          RESULTS MAY EXPLAIN YOUR PORTFOLIO
+        </p>
+      </div>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section
+      id="quizScreen"
+      class="screen quiz-screen"
+      aria-labelledby="questionText"
+      hidden
+    >
+      <div class="quiz-topline">
+        <div class="quiz-progress-copy">
+          <span id="questionCounter">QUESTION 01 / 05</span>
+          <span id="bullComment">THE BULL IS OBSERVING.</span>
+        </div>
+
+        <div
+          class="progress-track"
+          role="progressbar"
+          aria-valuemin="1"
+          aria-valuemax="5"
+          aria-valuenow="1"
+          aria-label="Assessment progress"
+        >
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="question-stage">
+        <p id="questionCategory" class="question-category">
+          DECISION PATTERN
+        </p>
+
+        <h2 id="questionText" class="question-text">
+          Question text loads here.
+        </h2>
+
+        <div
+          id="answerGrid"
+          class="answer-grid"
+          aria-live="polite"
+        ></div>
+      </div>
+
+      <div class="quiz-footer">
+        <span>SELECT ONE RESPONSE</span>
+        <span>ALL ANSWERS BECOME PART OF YOUR PERMANENT FILE</span>
+      </div>
+    </section>
+
+    <!-- ANALYSIS SCREEN -->
+    <section
+      id="analysisScreen"
+      class="screen analysis-screen"
+      aria-labelledby="analysisTitle"
+      hidden
+    >
+      <div class="analysis-content">
+        <p class="eyebrow">CLASSIFICATION PROCESS ACTIVE</p>
+
+        <h2 id="analysisTitle" class="analysis-title">
+          ANALYZING YOUR
+          <span>QUESTIONABLE INSTINCTS</span>
+        </h2>
+
+        <div class="analysis-warning">
+          DO NOT CLOSE THIS WINDOW
+        </div>
+
+        <div class="analysis-meter" aria-hidden="true">
+          <div id="analysisMeterFill" class="analysis-meter-fill"></div>
+        </div>
+
+        <p id="analysisMessage" class="analysis-message">
+          Consulting the bull...
+        </p>
+      </div>
+
+      <div class="analysis-register" aria-hidden="true">
+        <span>IMPULSE CONTROL</span>
+        <span>LOSS ATTACHMENT</span>
+        <span>HERD RESPONSE</span>
+        <span>NARRATIVE SUSCEPTIBILITY</span>
+        <span>RISK PERCEPTION</span>
+      </div>
+    </section>
+
+    <!-- DIAGNOSIS SCREEN -->
+    <section
+      id="resultScreen"
+      class="screen diagnosis-screen"
+      aria-labelledby="resultTitle"
+      hidden
+    >
+      <div
+        id="diagnosisBackdrop"
+        class="diagnosis-backdrop"
+        aria-hidden="true"
+      ></div>
+
+      <div class="diagnosis-overlay" aria-hidden="true"></div>
+      <div class="diagnosis-particles" aria-hidden="true"></div>
+
+      <div class="diagnosis-shell">
+
+        <div class="diagnosis-topline">
+          <div>
+            <p class="eyebrow">CLASSIFICATION COMPLETE</p>
+
+            <p class="diagnosis-division">
+              BLACK BULL INSTITUTE
+              <span>BEHAVIORAL FINANCE DIVISION</span>
+            </p>
+          </div>
+
+          <p class="result-code">
+            CASE <span id="resultCaseNumber">000000</span>
+          </p>
+        </div>
+
+        <div class="diagnosis-content">
+
+          <div class="diagnosis-heading">
+            <p class="diagnosis-label">
+              OFFICIAL UNOFFICIAL DIAGNOSIS
+            </p>
+
+            <p
+              id="resultIcon"
+              class="result-icon"
+              aria-hidden="true"
+            >
+              ▲
+            </p>
+
+            <h2 id="resultTitle" class="result-title">
+              TOP BLASTER
+            </h2>
+
+            <div class="severity-block">
+              <span>SEVERITY</span>
+              <strong id="resultRiskLevel">ADVANCED</strong>
+            </div>
+          </div>
+
+          <div class="diagnosis-report">
+            <p class="report-label">BEHAVIORAL SUMMARY</p>
+
+            <p id="resultSummary" class="result-summary">
+              Diagnosis summary.
+            </p>
+
+            <dl class="result-details">
+              <div>
+                <dt>NATURAL HABITAT</dt>
+                <dd id="resultHabitat">Unknown</dd>
+              </div>
+
+              <div>
+                <dt>SPECIAL ABILITY</dt>
+                <dd id="resultAbility">Unknown</dd>
+              </div>
+
+              <div>
+                <dt>KNOWN WEAKNESS</dt>
+                <dd id="resultWeakness">Unknown</dd>
+              </div>
+
+              <div>
+                <dt>FAVORITE PHRASE</dt>
+                <dd id="resultPhrase">Unknown</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="diagnosis-conclusion">
+          <div class="conclusion-copy">
+            <p>YOUR CONDITION HAS BEEN IDENTIFIED.</p>
+            <span>
+              Testing it in a live environment is not recommended.
+            </span>
+          </div>
+
+          <div class="result-actions">
+            <button
+              id="shareButton"
+              class="primary-action"
+              type="button"
+            >
+              <span>SHARE MY DIAGNOSIS</span>
+              <span class="action-arrow" aria-hidden="true">↗</span>
+            </button>
+
+            <a
+              id="bullpenButton"
+              class="secondary-action"
+              href="https://app.bullpen.fi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>ENTER THE BULLPEN</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <button
+              id="restartButton"
+              class="text-action"
+              type="button"
+            >
+              REQUEST REASSESSMENT
+            </button>
+          </div>
+
+          <p
+            id="shareFeedback"
+            class="share-feedback"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div class="diagnosis-footer">
+          <span>ASSESSED BY THE BLACK BULL</span>
+          <span>NOT FINANCIAL ADVICE</span>
+          <span>UNOFFICIAL COMMUNITY PROJECT</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      A COMMUNITY-MADE CULTURE EXPERIMENT.
+      NOT AFFILIATED WITH OR ENDORSED BY BULLPEN.
+    </p>
+
+    <nav class="footer-links" aria-label="External links">
+      <a
+        href="https://bullpen.fi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        BULLPEN
+      </a>
+
+      <a
+        href="https://docs.bullpen.fi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DOCS
+      </a>
+    </nav>
+  </footer>
+
+  <div
+    id="classificationStamp"
+    class="classification-stamp"
+    aria-hidden="true"
+  >
+    DIAGNOSIS COMPLETE
+  </div>
+
+  <div
+    id="flashOverlay"
+    class="flash-overlay"
+    aria-hidden="true"
+  ></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
