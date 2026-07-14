@@ -286,7 +286,7 @@ const questionBank = [
     answers: [
       {
         label: "I press it immediately.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       },
       {
         label: "I ask who made the button.",
@@ -310,7 +310,7 @@ const questionBank = [
       {
         label: "Bull",
         emoji: "🐂",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Turtle",
@@ -336,11 +336,11 @@ const questionBank = [
     answers: [
       {
         label: "Take the five dollars.",
-        score: { paperHands: 3 }
+        score: { paperHands: 2 }
       },
       {
         label: "Take the envelope.",
-        score: { topBlaster: 3, narrativeChaser: 1 }
+        score: { topBlaster: 2, narrativeChaser: 1 }
       },
       {
         label: "Ask what everyone else picked.",
@@ -359,7 +359,7 @@ const questionBank = [
     answers: [
       {
         label: "Run with them immediately.",
-        score: { topBlaster: 3, whaleWatcher: 1 }
+        score: { topBlaster: 2, whaleWatcher: 1 }
       },
       {
         label: "Ask what happened first.",
@@ -388,7 +388,7 @@ const questionBank = [
       {
         label: "Baseball bat",
         emoji: "⚾",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Old map",
@@ -409,7 +409,7 @@ const questionBank = [
     answers: [
       {
         label: "Missing out.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Losing what I already have.",
@@ -536,7 +536,7 @@ const questionBank = [
       },
       {
         label: "You only live once.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Good things take time.",
@@ -555,7 +555,7 @@ const questionBank = [
     answers: [
       {
         label: "Go left immediately.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 1 }
       },
       {
         label: "Wait for someone else.",
@@ -607,7 +607,7 @@ const questionBank = [
       {
         label: "Energy drink",
         emoji: "⚡",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "A mysterious mushroom",
@@ -655,7 +655,7 @@ const questionBank = [
       },
       {
         label: "Keep using it at full brightness.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { topBlaster: 1, exitLiquidity: 1 }
       },
       {
         label: "Ask who has a charger.",
@@ -678,7 +678,7 @@ const questionBank = [
       },
       {
         label: "The bright red door",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 1 }
       },
       {
         label: "The door closest to the exit",
@@ -697,7 +697,7 @@ const questionBank = [
     answers: [
       {
         label: "Open it now.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Keep it unopened.",
@@ -720,7 +720,7 @@ const questionBank = [
     answers: [
       {
         label: "Run toward it.",
-        score: { topBlaster: 3 }
+        score: { topBlaster: 2 }
       },
       {
         label: "Leave the building.",
@@ -820,7 +820,7 @@ const questionBank = [
       },
       {
         label: "I cannot lose.",
-        score: { topBlaster: 3, exitLiquidity: 1 }
+        score: { topBlaster: 2, exitLiquidity: 1 }
       },
       {
         label: "I need to know who else is winning.",
